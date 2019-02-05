@@ -10,7 +10,7 @@
 
 In this workshop you'll cover using a Process and and various Platform components to create a SQL Server Big Data Cluster solution you can deploy on premises, in the cloud, or in a hybrid architecture. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
 
-(<a href="00%20-%20Pre-Requisites.md" target="_blank">Make sure you check out the <b>Pre-Requisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
+(<a href="00%20-%20prerequisites.md" target="_blank">Make sure you check out the <b>prerequisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
 
 You'll cover the following topics in this Module:
 
@@ -49,7 +49,7 @@ Regardless of the Kubernetes target, the general steps for setting up the system
 
  - Install the cluster configuration tool mssqlctl on the administration machine
 
- - Deploy the SQL Server big data cluster on the Kubernetes cluster
+ - Deploy the SQL Server Big Data Cluster on the Kubernetes cluster
 
 In the sections that follow, you'll cover the general process for each of these deployments. The official documentation referenced above have the specific steps for each deployment, and the Activity section of this Module has the steps for deploying the BDC on AKS for the classroom enviornment.
 

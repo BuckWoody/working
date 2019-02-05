@@ -10,7 +10,7 @@
 
 In this workshop you'll cover using a Process and and various Platform components to create a SQL Server Big Data Cluster solution you can deploy on premises, in the cloud, or in a hybrid architecture. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
 
-(<a href="00%20-%20Pre-Requisites.md" target="_blank">Make sure you check out the <b>Pre-Requisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
+(<a href="00%20-%20prerequisites.md" target="_blank">Make sure you check out the <b>prerequisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
 
 You'll cover the following topics in this Module:
 
@@ -117,7 +117,7 @@ These components are used in the Controller of the SQL Server Big Data Cluster:
 
 <table style="tr:nth-child(even) {background-color: #f2f2f2;}; text-align: left; display: table; border-collapse: collapse; border-spacing: 5px; border-color: gray;">
 
-  <tr><td style="background-color: Cornsilk; color: black; padding: 5px 5px;"><b><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/concept-controller?view=sqlallproducts-allversions" target="_blank">SQL Server 2019 Controller Service</a></b></td><td style="background-color: Cornsilk; color: black; padding: 5px 5px;">The controller hosts the core logic for deploying and managing a big data cluster.</td></tr>
+  <tr><td style="background-color: Cornsilk; color: black; padding: 5px 5px;"><b><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/concept-controller?view=sqlallproducts-allversions" target="_blank">SQL Server 2019 Controller Service</a></b></td><td style="background-color: Cornsilk; color: black; padding: 5px 5px;">The controller hosts the core logic for deploying and managing a Big Data Cluster.</td></tr>
 
 </table>
 
@@ -145,7 +145,7 @@ These components are used in the Compute Pool of the SQL Server Big Data Cluster
 
 <table style="tr:nth-child(even) {background-color: #f2f2f2;}; text-align: left; display: table; border-collapse: collapse; border-spacing: 5px; border-color: gray;">
 
-  <tr><td style="background-color: Cornsilk; color: black; padding: 5px 5px;"><b><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/concept-compute-pool?view=sqlallproducts-allversions" target="_blank">SQL Server 2019</a></b></td><td style="background-color: Cornsilk; color: black; padding: 5px 5px;">Provides scale-out computational resources for a big data cluster.</td></tr>
+  <tr><td style="background-color: Cornsilk; color: black; padding: 5px 5px;"><b><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/concept-compute-pool?view=sqlallproducts-allversions" target="_blank">SQL Server 2019</a></b></td><td style="background-color: Cornsilk; color: black; padding: 5px 5px;">Provides scale-out computational resources for a Big Data Cluster.</td></tr>
 
 </table>
 
@@ -157,7 +157,7 @@ These components are used in the Compute Pool of the SQL Server Big Data Cluster
 
 <table style="tr:nth-child(even) {background-color: #f2f2f2;}; text-align: left; display: table; border-collapse: collapse; border-spacing: 5px; border-color: gray;">
 
-  <tr><td style="background-color: Cornsilk; color: black; padding: 5px 5px;"><b><a href="https://kubernetes.io/docs/concepts/architecture/nodes/" target="_blank">Kubernetes Node</a></b></td><td style="background-color: Cornsilk; color: black; padding: 5px 5px;">Provides computational resources for Operationalizing a big data cluster.</td></tr>
+  <tr><td style="background-color: Cornsilk; color: black; padding: 5px 5px;"><b><a href="https://kubernetes.io/docs/concepts/architecture/nodes/" target="_blank">Kubernetes Node</a></b></td><td style="background-color: Cornsilk; color: black; padding: 5px 5px;">Provides computational resources for Operationalizing a Big Data Cluster.</td></tr>
 
 </table>
 
@@ -173,16 +173,16 @@ These components are used in the Data Pool of the SQL Server Big Data Cluster:
 
 <table style="tr:nth-child(even) {background-color: #f2f2f2;}; text-align: left; display: table; border-collapse: collapse; border-spacing: 5px; border-color: gray;">
 
-  <tr><td style="background-color: Cornsilk; color: black; padding: 5px 5px;"><b><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/concept-data-pool?view=sqlallproducts-allversions" target="_blank">SQL Server</a></b></td><td style="background-color: Cornsilk; color: black; padding: 5px 5px;">Provides scaled data storage  a big data cluster.</td></tr>
+  <tr><td style="background-color: Cornsilk; color: black; padding: 5px 5px;"><b><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/concept-data-pool?view=sqlallproducts-allversions" target="_blank">SQL Server</a></b></td><td style="background-color: Cornsilk; color: black; padding: 5px 5px;">Provides scaled data storage  a Big Data Cluster.</td></tr>
   <tr><td><b><a href="https://docs.microsoft.com/en-us/sql/relational-databases/polybase/polybase-guide?view=sql-server-ver15" target="_blank">Polybase Feature</a></b></td><td>Used for working with external tables.</td></tr>
 
 </table>
 
 <h3>Data Plane: Storage Pool</h3>
 
-The storage pool consists of storage nodes comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL big data cluster are members of an HDFS cluster. You can use these as a "Data Lake" construct to work with large sets of data stored on disparate data sources. 
+The storage pool consists of storage nodes comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL Big Data Cluster are members of an HDFS cluster. You can use these as a "Data Lake" construct to work with large sets of data stored on disparate data sources. 
 
-Inside the Storage Pool, the Storage nodes are responsible for data ingestion through Spark, data storage in HDFS (Parquet format). HDFS also provides data persistency, as HDFS data is spread across all the storage nodes in the SQL big data cluster. The Storage Nodes also provide data access through HDFS and SQL Server endpoints.
+Inside the Storage Pool, the Storage nodes are responsible for data ingestion through Spark, data storage in HDFS (Parquet format). HDFS also provides data persistency, as HDFS data is spread across all the storage nodes in the SQL Big Data Cluster. The Storage Nodes also provide data access through HDFS and SQL Server endpoints.
 
 <br>
 <img style="height: 300; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="https://docs.microsoft.com/en-us/sql/big-data-cluster/media/concept-storage-pool/scale-big-data-on-demand.png?view=sqlallproducts-allversions">

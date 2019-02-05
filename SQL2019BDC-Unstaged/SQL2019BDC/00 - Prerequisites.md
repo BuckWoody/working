@@ -6,7 +6,7 @@
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/textbubble.png"> <h2>00 Pre-Requisites</h2>
+<img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/textbubble.png"> <h2>00 prerequisites</h2>
 
 The "Microsoft SQL Server Big Data Clusters Architecture" workshop is taught using the following components, which you will install and configure in the sections that follow. 
 
@@ -19,7 +19,7 @@ The other requirements are:
 - **Microsoft Azure**: This workshop uses the Microsoft Azure platform to host the Kubernetes cluster (using the Azure Kubernetes Service), and optionally you can deploy a system there to act as a workstation. You can use a free Azure account, an MSDN Account, your own account, or potentially one provided for you, as long as you can create about $100.00 (U.S.) worth of assets.
 - **SQL Server Big Data Cluster credentials** - As of this writing, you must have an invitation code to install and configure SQL Server Big Data Clusters.
 - **Azure Command Line Interface**: The Azure CLI allows you to work from the command line on multiple platforms to interact with your Azure subscription, and also has control statements for AKS.
-- **Python (3)**: Python version 3.5 is used by the SQL Server programs to deploy and manage a SQL Server Big Data Cluster.
+- **Python (3)**: Python version 3.5 (and higher) is used by the SQL Server programs to deploy and manage a SQL Server Big Data Cluster.
 - **The pip3 Package**: The Python package manager *pip3* is used to install various SQL Server BDC deployment and configuration tools. 
 - **The kubectl program**: The *kubectl* program is the command-line control feature for Kubernetes.
 - **The mssqlctl program**: The *mssqlctl* program is the deployment and configuration tool for SQL Server Big Data Clusters.
@@ -89,6 +89,8 @@ Get-WindowsUpdate
 Install-WindowsUpdate
 </pre>
 
+*Note: If you get an error during this update process, evaluate it to see if it is fatal. You may recieve certain driver errors if you are using a Virtual Machine, this can be safely ignored.*
+
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Install Chocolaty Windows package Manager</p>
 
 Next, install the Chocolaty Windows Package manager to aid in command-line installations:
@@ -99,10 +101,11 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 choco feature enable -n allowGlobalConfirmation
 </pre>
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Environment Variables</p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Review Environment Variables</p>
 
-Your environment variables control how the cluster will be built. 
-<p><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/quickstart-big-data-cluster-deploy?view=sqlallproducts-allversions#define-environment-variables" target="_blank">Refer to this documentation for both the latest statements to run, and for what they need to be set to. These change based on the current release of the Private Preview.</a></p> 
+Your environment variables control how the cluster will be built.  
+
+<p><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/quickstart-big-data-cluster-deploy?view=sqlallproducts-allversions#define-environment-variables" target="_blank">Refer to this documentation for both the latest statements, and for what they need to be set to. These change based on the current release of the Private Preview.</a> Do not set these at this time, just review the page.</p> 
 
 The variables for **name**, **password** and **e-mail** for the Big Data Cluster is provided to you when you request access to the Early Adopter program. 
 
@@ -119,7 +122,7 @@ start "https://aka.ms/installazurecliwindows"
 
 You'll need to click the MSI file once it downloads, and take all defaults. 
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/point1.png"><b>Activity 4: Install Python 3 and git</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/point1.png"><b>Activity 5: Install Python 3 and git</b></p>
 
 While `git` has not been mentioned as a requirement for SQL Server, it's used for the workshop. First you'll install Python.
 
@@ -130,6 +133,12 @@ choco install python3
 write-host "Install git"
 choco install git
 </pre>
+
+Note: Python can install in multiple locations based on various conditions. To see the Python intepreter location in current use in Windows, type: 
+
+`where python`
+
+(In Linux, `which Python`)
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/point1.png"><b>Activity 6: Install kubectl</b></p>
 
@@ -175,7 +184,9 @@ Get-WindowsUpdate
 Install-WindowsUpdate
 </pre>
 
-**Note: If you are using a Virtual Machine in Azure, power off the Virtual Machine using the Azure Portal every time you are done with it. Turning off the VM using just the Windows power off in the VM only stops it running, but you are still charged for the VM if you do not stop it from the Portal. Stop the VM from the Portal unless you are actively using it.**
+*Note 1: If you get an error during this update process, evaluate it to see if it is fatal. You may recieve certain driver errors if you are using a Virtual Machine, this can be safely ignored.*
+
+**Note 2: If you are using a Virtual Machine in Azure, power off the Virtual Machine using the Azure Portal every time you are done with it. Turning off the VM using just the Windows power off in the VM only stops it running, but you are still charged for the VM if you do not stop it from the Portal. Stop the VM from the Portal unless you are actively using it.**
 
 <p><img style="margin: 0px 15px 15px 0px;" src="../graphics/owl.png"><b>For Further Study</b></p>
 <ul>

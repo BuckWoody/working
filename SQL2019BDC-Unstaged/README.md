@@ -21,9 +21,9 @@
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/textbubble.png"> <h2><a name="about">About this Workshop</a></h2>
 
-Welcome to this Microsoft solutions workshop on *Microsoft SQL Server Big Data Clusters Architecture*. In this workshop, you'll learn how SQL Server big data clusters implements large-scale data processing and machine learning, and how to select and plan for the proper architecture to enable machine learning to train your models using Python, R, Java or SparkML to operationalize these models, and how to deploy your intelligent apps side-by-side with their data.
+Welcome to this Microsoft solutions workshop on *Microsoft SQL Server Big Data Clusters Architecture*. In this workshop, you'll learn how SQL Server Big Data Clusters implements large-scale data processing and machine learning, and how to select and plan for the proper architecture to enable machine learning to train your models using Python, R, Java or SparkML to operationalize these models, and how to deploy your intelligent apps side-by-side with their data.
 
-The focus of this workshop is to understand how to deploy an on-premise, hybrid or local environment of a big data cluster, and understand the components of the big data solution architecture.
+The focus of this workshop is to understand how to deploy an on-premise, hybrid or local environment of a Big Data Cluster, and understand the components of the big data solution architecture.
 
 You'll start by understanding the concepts of big data analytics, and you'll get an overview of the technologies (such as containers, Kubernetes, Spark and HDFS, machine learning, and other technologies) that you will use throughout the workshop. Next, you'll understand the architecture of SQL Server Big Data Clusters. You'll learn how to create external tables over other data sources to unify your data, and how to use Spark to run big queries over your data in HDFS or do data preparation. You'll review a complete solution for an end-to-end scenario, with a focus on how to extrapolate what you have learned to create other solutions for your organization.
 
@@ -112,7 +112,7 @@ If you are new to these, here are a few references you can complete prior to cla
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/bulletlist.png"> <h3>Setup</h3>
 
-<a href="ML%20Services%20for%20SQL%20Server/00%20Pre-Requisites.md" target="_blank">A full pre-requisites document is located here</a>. These instructions should be completed before the workshop starts, since you will not have time to cover these in class. <i>Remember to turn off any Virtual Machines from the Azure Portal when not taking the class so that you do incur charges (shutting down the machine in the VM itself is not sufficient)</i>.
+<a href="SQL2019BDC/00%20-%20Prerequisites.md" target="_blank">A full prerequisites document is located here</a>. These instructions should be completed before the workshop starts, since you will not have time to cover these in class. <i>Remember to turn off any Virtual Machines from the Azure Portal when not taking the class so that you do incur charges (shutting down the machine in the VM itself is not sufficient)</i>.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
@@ -159,4 +159,4 @@ This is a modular workshop, and in each section, you'll learn concepts, technolo
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/geopin.png"><b><a name="nextsteps">Next Steps</a></b></p>
 
-Next, Continue to <a href="SQL2019BDC/00%20-%20Pre-Requisites.md" target="_blank"><i> Pre-Requisites</i></a>
+Next, Continue to <a href="SQL2019BDC/00%20-%20Prerequisites.md" target="_blank"><i> prerequisites</i></a>

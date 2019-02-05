@@ -10,7 +10,7 @@
 
 In this workshop you'll cover using a Process and various Platform components to create a SQL Server Big Data Cluster solution you can deploy on premises, in the cloud, or in a hybrid architecture. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic. There's a lot here - so focus on understanding the overall system first, then come back and explore each section.
 
-(<a href="00%20-%20Pre-Requisites.md" target="_blank">Make sure you check out the <b>Pre-Requisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
+(<a href="00%20-%20prerequisites.md" target="_blank">Make sure you check out the <b>prerequisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
 
 You'll cover the following topics in this Module:
 
@@ -136,7 +136,7 @@ Using the following steps, you will create a Resource Group in Azure that will h
 
 <p><b>Steps</b></p>
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png"> <a href="00%20-%20Pre-Requisites.md" target="_blank">Ensure that you have completed all Pre-Requisites</a>.</p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png"> <a href="00%20-%20prerequisites.md" target="_blank">Ensure that you have completed all prerequisites</a>.</p>
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png"> <a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/quickstart-big-data-cluster-deploy?view=sqlallproducts-allversions" target="_blank">Read the following article, ensuring that you carefully follow each step</a>. Stop at the section marked <b>Connect to the cluster</b>.</p>
  
 <p style="border-bottom: 1px solid lightgrey;"></p>
@@ -312,7 +312,7 @@ For Big Data systems, having lots of Containers is very advantageous to segment 
 
 <p><img style="height: 400; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"  src="../graphics/KubernetesCluster.png"></p> 	 	
 
-In SQL Server Big Data Clusters, Kubernetes is responsible for the state of the SQL Server big data clusters; Kubernetes builds and configures the cluster nodes, assigns pods to nodes, and monitors the health of the cluster.
+In SQL Server Big Data Clusters, Kubernetes is responsible for the state of the SQL Server Big Data Clusters; Kubernetes builds and configures the cluster nodes, assigns pods to nodes, and monitors the health of the cluster.
 
 (You'll cover the storage aspects of Kubernetes clusters in a moment.)
 
@@ -338,7 +338,7 @@ For large scale-out data systems, the mounting point for an I/O is another abstr
 
 With an abstraction such as Containers, storage becomes an issue for two reasons: The storage can disappear when the Container is removed, and other Containers and technologies can't access storage easily within a Container. 
 
-To solve this, Docker implemented the concept of <a href="https://docs.docker.com/engine/admin/volumes/" target="_blank">Volumes</a>, and <a href="https://kubernetes.io/docs/concepts/storage/volumes/" target="_blank">Kubernetes extended this concept</a>. Using <a href="https://github.com/kubernetes/examples/blob/master/staging/volumes/azure_disk/README.md" target="_blank">a specific protocol and command, Kubernetes (and in specific, SQL Server BDC) mounts the storage as a *Persistent Volume* and uses a construct called a *Persistent Volume Claim* to access it</a>. A Kubernetes Volume is a mounted directory which is accessible to the Containers in a Pod.
+To solve this, Docker implemented the concept of <a href="https://docs.docker.com/engine/admin/volumes/" target="_blank">Volumes</a>, and <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/" target="_blank">Kubernetes extended this concept</a>. Using <a href="https://github.com/kubernetes/examples/blob/master/staging/volumes/azure_disk/README.md" target="_blank">a specific protocol and command, Kubernetes (and in specific, SQL Server BDC) mounts the storage as a *Persistent Volume* and uses a construct called a *Persistent Volume Claim* to access it</a>. A Kubernetes Volume is a mounted directory which is accessible to the Containers in a Pod within the Node.
 
 You'll cover Volumes in more depth in a future module as you learn how the SQL Server BDC takes advantage of these constructs.
 
@@ -374,7 +374,7 @@ You'll explore further operations with these tools in the <i>Management and Moni
 
 The **mssqlctl** command-line utility is written in Python and can be installed on your workstation using the **pip** command in Python. You will see how to install this utility in the *Planning, Installation and Configuration* module.
 
-The **mssqlctl** utility enables cluster administrators to bootstrap and manage big data clusters via the REST APIs exposed by the Controller service. The controller is deployed and hosted in the same Kubernetes namespace where the customer wants to build out a big data cluster. The Controller is responsible for core logic for deploying and managing a big data cluster.
+The **mssqlctl** utility enables cluster administrators to bootstrap and manage Big Data Clusters via the REST APIs exposed by the Controller service. The controller is deployed and hosted in the same Kubernetes namespace where the customer wants to build out a Big Data Cluster. The Controller is responsible for core logic for deploying and managing a Big Data Cluster.
 
 The <a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/concept-controller?view=sqlallproducts-allversions 
 " target="_blank">Controller service is installed by a Kubernetes administrator during cluster bootstrap</a>, using the mssqlctl command-line utility. 
@@ -401,7 +401,7 @@ You'll use Notebooks within Azure Data Studio to work with Spark, which you'll l
 
 *Azure Data Studio* is a cross-platform database tool to manage and program on-premises and cloud data platforms on Windows, MacOS, and Linux. It is extensible, and one of these extensions is how you work with Azure Data Studio code and Jupyter Notebooks. It is built on the Visual Studio Code shell. The editor in Azure Data Studio has Intellisense, code snippets, source control integration, and an integrated terminal. 
 
-If you have not completed the pre-requisites for this workshop you can <a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/download?view=sql-server-2017
+If you have not completed the prerequisites for this workshop you can <a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/download?view=sql-server-2017
 " target="_blank">install Azure Data Studio from this location</a>, and you will install the Extension to work with SQL Server Big Data Clusters in a future module</a>.
 
 You can <a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is?view=sql-server-2017 
