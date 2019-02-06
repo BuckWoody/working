@@ -67,7 +67,7 @@ The solution includes the following technologies - although you are not limited 
   <tr><th style="background-color: #1b20a1; color: white;">Technology</th> <th style="background-color: #1b20a1; color: white;">Description</th></tr>
 
   <tr><td><i>Linux</i></td><td>Operating system used in Containers and Container Orchestration</td></tr>
-  <tr><td><i>Docker</i></td><td>Encapsulation level for the SQL Server Big Data Cluster architecture</td></tr>
+  <tr><td><i>Docker</i></td><td>Encapsulation level for the SQL Server big data cluster architecture</td></tr>
   <tr><td><i>Kubernetes</i></td><td>Management, control plane for Containers</td></tr>
   <tr><td>Microsoft Azure</td><td>Cloud environment for services</td></tr>
   <tr><td>Azure Container Service (AKS)</td><td>Kubernetes as a Service</td></tr>
@@ -132,7 +132,7 @@ This is a modular workshop, and in each section, you'll learn concepts, technolo
   <tr><td style="background-color: AliceBlue; color: black;"><b>Module</b></td><td style="background-color: AliceBlue; color: black;"><b>Topics</b></td></tr>
 
   <tr><td><a href="url" target="_blank">01 - Why SQL Server 2019 </a></td><td> TODO: Module Description</td></tr>
-  <tr><td style="background-color: AliceBlue; color: black;"><a href="url" target="_blank">02 - Big Data Clusters and Data Virtualization</a> </td><td td style="background-color: AliceBlue; color: black;"> TODO: Module Description</td></tr>
+  <tr><td style="background-color: AliceBlue; color: black;"><a href="url" target="_blank">02 - big data clusters and Data Virtualization</a> </td><td td style="background-color: AliceBlue; color: black;"> TODO: Module Description</td></tr>
   <tr><td><a href="url" target="_blank">03 - Intelligent Performance </a></td><td> TODO: Module Description</td></tr>
   <tr><td style="background-color: AliceBlue; color: black;"><a href="url" target="_blank">04 - New Security Capabilities</a> </td><td td style="background-color: AliceBlue; color: black;"> TODO: Module Description</td></tr>  
   <tr><td><a href="url" target="_blank">05 - Mission Critical Availability </a></td><td> TODO: Module Description</td></tr>

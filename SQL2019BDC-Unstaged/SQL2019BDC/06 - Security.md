@@ -1,6 +1,6 @@
 ![](../graphics/microsoftlogo.png)
 
-# Workshop: Microsoft SQL Server Big Data Clusters Architecture
+# Workshop: Microsoft SQL Server big data clusters Architecture
 
 #### <i>A Microsoft workshop from the SQL Server team</i>
 
@@ -8,7 +8,7 @@
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/textbubble.png"> <h2>Security</h2>
 
-In this workshop you'll cover using a Process and and various Platform components to create a SQL Server Big Data Cluster solution you can deploy on premises, in the cloud, or in a hybrid architecture. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
+In this workshop you'll cover using a Process and and various Platform components to create a SQL Server big data cluster solution you can deploy on premises, in the cloud, or in a hybrid architecture. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
 
 (<a href="00%20-%20prerequisites.md" target="_blank">Make sure you check out the <b>prerequisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
 
@@ -16,7 +16,7 @@ You'll cover the following topics in this Module:
 
 <dl>
 
-  <dt><a href="#6-0">6.0 Managing SQL Server Big Data Cluster Security</a></dt>
+  <dt><a href="#6-0">6.0 Managing SQL Server big data cluster Security</a></dt>
   <dt><a href="#6-1">6.1 Access</a></dt>
   <dt><a href="#6-2">6.2 Authentication and Authorization</a></dt>
 
@@ -24,7 +24,7 @@ You'll cover the following topics in this Module:
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="6-0">6.0 Managing SQL Server Big Data Cluster Security</a></h2>
+<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="6-0">6.0 Managing SQL Server big data cluster Security</a></h2>
 
 Authentication is the process of verifying the identity of a user or service and ensuring they are who they are claiming to be. Authorization refers to granting or denying of access to specific resources based on the requesting user's identity. This step is performed after a user is identified through authentication.
 
@@ -32,14 +32,14 @@ Authentication is the process of verifying the identity of a user or service and
 
 <h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="6-1">6.1 Access</a></h2>
 
-There are three endpoints for entry points to the Big Data Cluster:
+There are three endpoints for entry points to the big data cluster:
 
 <table>
 
 <tr><th style="background-color: #1b20a1; color: white;">Endpoint</th> <th style="background-color: #1b20a1; color: white;">Description</th></tr>
 
   <tr><td>HDFS/Spark (Knox) gateway</td><td>An HTTPS-based endpoint that proxies other endpoints. The HDFS/Spark gateway is used for accessing services like webHDFS and Livy. Wherever you see references to Knox, this is the endpoint</td></tr>
-  <tr><td>Controller endpoint</td><td>The endpoint for the Big Data Cluster management service that exposes REST APIs for managing the cluster. Some tools, such as the Admin portal, are also accessed through this endpoint</td></tr>
+  <tr><td>Controller endpoint</td><td>The endpoint for the big data cluster management service that exposes REST APIs for managing the cluster. Some tools, such as the Admin portal, are also accessed through this endpoint</td></tr>
   <tr><td>Master Instance</td><td>Get a detailed description of a specific pod in json format output. It includes details, such as the current Kubernetes node that the pod is placed on, the containers running within the pod, and the image used to bootstrap the containers. It also shows other details, such as labels, status, and persisted volumes claims that are associated with the pod</td></tr>
   
 </table>
@@ -75,9 +75,9 @@ Upon deployment of the cluster, a number of SQL logins are created:
 
 A special SQL login is created in the Controller SQL instance that is system managed, with sysadmin role. The password for this login is captured as a K8s secret. A sysadmin login is created in all SQL instances in the cluster, that Controller owns and manages. It is required for Controller to perform administrative tasks, such as HA setup or upgrade, on these instances. These logins are also used for intra-cluster communication between SQL instances, such as the SQL master instance communicating with a data pool.
 
-<i>Note: In current release, only basic authentication is supported. Fine-grained access control to HDFS objects, and SQL Big Data Cluster compute and data pools, is not yet available.</i>
+<i>Note: In current release, only basic authentication is supported. Fine-grained access control to HDFS objects, and SQL big data cluster compute and data pools, is not yet available.</i>
 
-For Intra-cluster communication with non-SQL services within the Big Data Cluster, such as Livy to Spark or Spark to the storage pool, security uses certificates. All SQL Server to SQL Server communication is secured using SQL logins.
+For Intra-cluster communication with non-SQL services within the big data cluster, such as Livy to Spark or Spark to the storage pool, security uses certificates. All SQL Server to SQL Server communication is secured using SQL logins.
 
 <br>
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/point1.png"><b>Activity: Review Security Endpoints</b></p>
@@ -95,7 +95,7 @@ In this activity, you will review the endpoints exposed on the cluster.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="../graphics/owl.png"><b>For Further Study</b></p>
 <ul>
-    <li><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/concept-security?view=sqlallproducts-allversions" target="_blank">Security concepts for SQL Server Big Data Clusters</a></li>
+    <li><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/concept-security?view=sqlallproducts-allversions" target="_blank">Security concepts for SQL Server big data clusters</a></li>
 </ul>
 
-Congratulations! You have completed this workshop on SQL Server Big Data Clusters Architecture. You now have the tools, assets, and processes you need to extrapolate this information into other applications.
+Congratulations! You have completed this workshop on SQL Server big data clusters Architecture. You now have the tools, assets, and processes you need to extrapolate this information into other applications.

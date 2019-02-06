@@ -1,6 +1,6 @@
 ![](../graphics/microsoftlogo.png)
 
-# Workshop: Microsoft SQL Server Big Data Clusters Architecture
+# Workshop: Microsoft SQL Server big data clusters Architecture
 
 #### <i>A Microsoft Course from the SQL Server team</i>
 
@@ -8,24 +8,24 @@
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/textbubble.png"> <h2>Operationalization</h2>
 
-In this workshop you'll cover using a Process and and various Platform components to create a SQL Server Big Data Cluster solution you can deploy on premises, in the cloud, or in a hybrid architecture. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
+In this workshop you'll cover using a Process and and various Platform components to create a SQL Server big data cluster solution you can deploy on premises, in the cloud, or in a hybrid architecture. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
 
 (<a href="00%20-%20prerequisites.md" target="_blank">Make sure you check out the <b>prerequisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
 
 You'll cover the following topics in this Module:
 
 <dl>
-  <dt><a href="#4-0">4.0 End-To-End Solution for Big Data Clusters</a></dt>
+  <dt><a href="#4-0">4.0 End-To-End Solution for big data clusters</a></dt>
   <dt><a href="#4-1">4.1 Data Virtualization</a></dt>
-  <dt><a href="#4-2">4.2 Creating a Data Mart using Big Data Clusters</a></dt>
-  <dt><a href="#4-3">4.3 Querying HDFS Data using Big Data Clusters</a></dt>
+  <dt><a href="#4-2">4.2 Creating a Data Mart using big data clusters</a></dt>
+  <dt><a href="#4-3">4.3 Querying HDFS Data using big data clusters</a></dt>
 </dl>
 
 <br>
 <p style="border-bottom: 1px solid lightgrey;"></p>
 <br>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="4-0">4.0 End-To-End Solution for Big Data Clusters</a></h2>
+<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="4-0">4.0 End-To-End Solution for big data clusters</a></h2>
 
 Recall from <i>The Big Data Landscape</i> module that you learned about the Wide World Importers company. <a href="https://azure-scenarios-experience.azurewebsites.net/big-data.html" target="_blank">Wide World Importers </a> (WWI) is a traditional brick and mortar business with a long track record of success, generating profits through strong retail store sales of their unique offering of affordable products from around the world. They have a traditional N-tier application that uses a front-end (mobile, web and installed) that interacts with a scale-out middle-tier software product, which in turn stores data in a large SQL Server database that has been scaled-up to meet demand.  
 
@@ -55,7 +55,7 @@ This presented the following four challenges - the IT team at WWI needs to:
 
 <h3>Solution - <i>Challenge 1: Scale Data System</i></h3>
 
-To meet these challenges, the following solution is proposed. Using the SQL Server 2019 Big Data Cluster platform you learned about in the <i>02 - SQL Server BDC Components</i> Module, the solution allows the company to keep it's current codebase, while enabling a flexible scale-out architecture. This answers the first challenge of working with a scale-out system for larger data environments.
+To meet these challenges, the following solution is proposed. Using the SQL Server 2019 big data cluster platform you learned about in the <i>02 - SQL Server BDC Components</i> Module, the solution allows the company to keep it's current codebase, while enabling a flexible scale-out architecture. This answers the first challenge of working with a scale-out system for larger data environments.
 
 The following diagram illustrates the complete solution that you can use to brief your audience with: 
 
@@ -81,7 +81,7 @@ This process allows not only a query to disparate systems, but also those remote
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/point1.png"><b>Activity: Load and query data in an External Table</b></p>
 
-In this activity, you will load the sample data into your Big Data Cluster environment, and then create and use an External table to query the data in HDFS. This process is similar to connecting to any Polybase target.
+In this activity, you will load the sample data into your big data cluster environment, and then create and use an External table to query the data in HDFS. This process is similar to connecting to any Polybase target.
 
 <b>Steps</b>
 
@@ -93,7 +93,7 @@ In this activity, you will load the sample data into your Big Data Cluster envir
 <p style="border-bottom: 1px solid lightgrey;"></p>
 <br>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="4-2">4.2 Creating a Data Mart using Big Data Cluster - <i>Challenge 3: Deep Analytics</i></a></h2>
+<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="4-2">4.2 Creating a Data Mart using big data cluster - <i>Challenge 3: Deep Analytics</i></a></h2>
 
 Ad-hoc queries are very useful for many scenarios. There are times when you would like to bring the data into storage, so that you can create denormalized representations of datasets, aggregated data, and other purpose-specific data tasks. Storing data in this fashion is called a "Data Mart". 
 
@@ -105,7 +105,7 @@ Using the Data Virtualization capability you saw in the <i>02 - SQL Server BDC C
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/point1.png"><b>Activity: Load and query data into the Data Pool</b></p>
 
-In this activity, you will load the sample data into your Big Data Cluster environment, and then create and use an External table to load data into the Data Pool.
+In this activity, you will load the sample data into your big data cluster environment, and then create and use an External table to load data into the Data Pool.
 
 <b>Steps</b>
 
@@ -114,7 +114,7 @@ In this activity, you will load the sample data into your Big Data Cluster envir
 <p style="border-bottom: 1px solid lightgrey;"></p>
 <br>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="4-3">4.3 Querying HDFS Data using Big Data Cluster - <i>Challenge 4: Enable AI</i></a></h2>
+<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="4-3">4.3 Querying HDFS Data using big data cluster - <i>Challenge 4: Enable AI</i></a></h2>
 
 There are three primary uses for a large cluster of data processing systems for Machine Learning and AI applications. The first is that the users will involved in the creation of the <a href="https://www.codeingschool.com/2018/09/what-are-features-and-labels-in-machine-learning.html" target="_blank">Features used in various ML and AI algorithms, and are often tasked to Label</a> the data. These users can access the Data Pool and Data Storage data stores directly to query and assist with this task. 
 
@@ -131,7 +131,7 @@ The Data Scientist has another option to create and train ML and AI models. The 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/point1.png"><b>Activity: Load data with Spark, run a Spark Notebook</b></p>
 <br>
 
-In this activity, you will load the sample data into your Big Data Cluster environment using Spark, and use a Notebook in Azure Data Studio to work with it.
+In this activity, you will load the sample data into your big data cluster environment using Spark, and use a Notebook in Azure Data Studio to work with it.
 
 <b>Steps</b>
 
@@ -145,9 +145,9 @@ In this activity, you will load the sample data into your Big Data Cluster envir
 <p><img style="margin: 0px 15px 15px 0px;" src="../graphics/owl.png"><b>For Further Study</b></p>
 <ul>
     <li><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions" target="_blank">Official Documentation for this section</a></li>
-    <li><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/data-ingestion-curl?view=sqlallproducts-allversions" target="_blank">Use curl to load data into HDFS on SQL Server 2019 Big Data Clusters</a></li>
+    <li><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/data-ingestion-curl?view=sqlallproducts-allversions" target="_blank">Use curl to load data into HDFS on SQL Server 2019 big data clusters</a></li>
     <li><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/train-and-create-machinelearning-models-with-spark?view=sqlallproducts-allversions" target="_blank">Train and Create machine learning models with Spark</a></li>
-    <li><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-create-apps?view=sqlallproducts-allversions" target="_blank">How to deploy an app on SQL Server 2019 Big Data Cluster</a></li>
+    <li><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-create-apps?view=sqlallproducts-allversions" target="_blank">How to deploy an app on SQL Server 2019 big data cluster</a></li>
     <li><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/notebooks-guidance?view=sqlallproducts-allversions" target="_blank">How to use notebooks in SQL Server 2019 preview</a></li>
 </ul>
 

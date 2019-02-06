@@ -1,6 +1,6 @@
 ![](../graphics/microsoftlogo.png)
 
-# Workshop: Microsoft SQL Server Big Data Clusters Architecture
+# Workshop: Microsoft SQL Server big data clusters Architecture
 
 #### <i>A Microsoft Course from the SQL Server team</i>
 
@@ -8,7 +8,7 @@
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/textbubble.png"> <h1>The Big Data Landscape</h1>
 
-In this workshop you'll cover using a Process and various Platform components to create a SQL Server Big Data Cluster solution you can deploy on premises, in the cloud, or in a hybrid architecture. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic. There's a lot here - so focus on understanding the overall system first, then come back and explore each section.
+In this workshop you'll cover using a Process and various Platform components to create a SQL Server big data cluster solution you can deploy on premises, in the cloud, or in a hybrid architecture. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic. There's a lot here - so focus on understanding the overall system first, then come back and explore each section.
 
 (<a href="00%20-%20prerequisites.md" target="_blank">Make sure you check out the <b>prerequisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
 
@@ -130,7 +130,7 @@ In the <i>04 - Operationalization</i> Module, you'll learn how the team solves e
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/point1.png"><b><a name="aks">Activity: Install Class Environment on AKS</a></b></p>
 
-In this lab you will deploy a SQL Server 2019 Big Data Cluster to the Azure Kubernetes Service. You will need a client machine and a subscription to Microsoft Azure where you can create assets. This will take some time, so you'll do this now as you work through the next few modules, and then return to the installation process in a later module. 
+In this lab you will deploy a SQL Server 2019 big data cluster to the Azure Kubernetes Service. You will need a client machine and a subscription to Microsoft Azure where you can create assets. This will take some time, so you'll do this now as you work through the next few modules, and then return to the installation process in a later module. 
 
 Using the following steps, you will create a Resource Group in Azure that will hold your BDC on AKS. When you complete your lab you can delete this Resource Group which will stop the Azure charges for this course. 
 
@@ -312,7 +312,7 @@ For Big Data systems, having lots of Containers is very advantageous to segment 
 
 <p><img style="height: 400; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"  src="../graphics/KubernetesCluster.png"></p> 	 	
 
-In SQL Server Big Data Clusters, Kubernetes is responsible for the state of the SQL Server Big Data Clusters; Kubernetes builds and configures the cluster nodes, assigns pods to nodes, and monitors the health of the cluster.
+In SQL Server big data clusters, Kubernetes is responsible for the state of the SQL Server big data clusters; Kubernetes builds and configures the cluster nodes, assigns pods to nodes, and monitors the health of the cluster.
 
 (You'll cover the storage aspects of Kubernetes clusters in a moment.)
 
@@ -344,7 +344,7 @@ You'll cover Volumes in more depth in a future module as you learn how the SQL S
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/point1.png"><b>Activity: Review HDFS Tutorial</b></p>
 
-In large part, you will not have to work with HDFS directly in the SQL Server Big Data Cluster. However, it is a key concept to understand. In this review exercise, you will see a set of tutorials on how HDFS works in greater depth.
+In large part, you will not have to work with HDFS directly in the SQL Server big data cluster. However, it is a key concept to understand. In this review exercise, you will see a set of tutorials on how HDFS works in greater depth.
 
 <p><b>Steps</b></p>
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png"><a href="https://data-flair.training/blogs/hadoop-hdfs-tutorial/" target="_blank">Open this reference, and review the lessons you see there</a>. Bookmark this reference for later review.</p>
@@ -355,7 +355,7 @@ In large part, you will not have to work with HDFS directly in the SQL Server Bi
 
 <h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="1-6">1.6 Big Data Technologies: Command and Control</a></h2>
 
-There are three primary tools and utilities you will use to control the SQL Server Big Data Cluster:
+There are three primary tools and utilities you will use to control the SQL Server big data cluster:
 
  - kubectl
  - mssqlctl
@@ -370,11 +370,11 @@ A <a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/" target="_bl
  
 You'll explore further operations with these tools in the <i>Management and Monitoring</i> module.
 
-<h3>Managing and Monitoring the SQL Server Big Data Cluster <i>(mssqlctl)</i></h3>
+<h3>Managing and Monitoring the SQL Server big data cluster <i>(mssqlctl)</i></h3>
 
 The **mssqlctl** command-line utility is written in Python and can be installed on your workstation using the **pip** command in Python. You will see how to install this utility in the *Planning, Installation and Configuration* module.
 
-The **mssqlctl** utility enables cluster administrators to bootstrap and manage Big Data Clusters via the REST APIs exposed by the Controller service. The controller is deployed and hosted in the same Kubernetes namespace where the customer wants to build out a Big Data Cluster. The Controller is responsible for core logic for deploying and managing a Big Data Cluster.
+The **mssqlctl** utility enables cluster administrators to bootstrap and manage big data clusters via the REST APIs exposed by the Controller service. The controller is deployed and hosted in the same Kubernetes namespace where the customer wants to build out a big data cluster. The Controller is responsible for core logic for deploying and managing a big data cluster.
 
 The <a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/concept-controller?view=sqlallproducts-allversions 
 " target="_blank">Controller service is installed by a Kubernetes administrator during cluster bootstrap</a>, using the mssqlctl command-line utility. 
@@ -402,7 +402,7 @@ You'll use Notebooks within Azure Data Studio to work with Spark, which you'll l
 *Azure Data Studio* is a cross-platform database tool to manage and program on-premises and cloud data platforms on Windows, MacOS, and Linux. It is extensible, and one of these extensions is how you work with Azure Data Studio code and Jupyter Notebooks. It is built on the Visual Studio Code shell. The editor in Azure Data Studio has Intellisense, code snippets, source control integration, and an integrated terminal. 
 
 If you have not completed the prerequisites for this workshop you can <a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/download?view=sql-server-2017
-" target="_blank">install Azure Data Studio from this location</a>, and you will install the Extension to work with SQL Server Big Data Clusters in a future module</a>.
+" target="_blank">install Azure Data Studio from this location</a>, and you will install the Extension to work with SQL Server big data clusters in a future module</a>.
 
 You can <a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is?view=sql-server-2017 
 " target="_blank">learn more about Azure Data Studio here</a>.
@@ -427,13 +427,13 @@ You'll explore further operations with the Azure Data Studio in the <i>Operation
 
 In any large data system, you will need a way to bring the data in. In some cases, you will edit the data either on the way in, or after it is staged using a process called "Extract, Transform and Load" (ETL) or leave the data "pure" and unaltered (common in Data Science projects), using a process called "Extract, Load and Transform" (ELT). 
 
-In SQL Server Big Data Clusters, you'll learn about three ways that the system interacts with large sets of data:
+In SQL Server big data clusters, you'll learn about three ways that the system interacts with large sets of data:
 
  - "Virtualize" the data by pushing down the query to the source system (no data is ingested in this scenario)
  - Ingesting data into SQL Server Tables, using the PolyBase feature or into standard SQL Server constructs
  - Loading data into HDFS
 
-In Data Virtualization, no data is brought into storage - it is queried from it's source. It's important to think about the network bandwidth per query in this scenario. The next two scenarios do bring data into the system, either into SQL Server tables within the Big Data Cluster or into the HDFS mount points.
+In Data Virtualization, no data is brought into storage - it is queried from it's source. It's important to think about the network bandwidth per query in this scenario. The next two scenarios do bring data into the system, either into SQL Server tables within the big data cluster or into the HDFS mount points.
 
 In both cases, the first considerations for loading data are source-data locality and network bandwidth, utilization, and predictability of the path to the SQL Server BDC destination. Depending on where the data originates, network bandwidth will play a major part in your loading performance. For source data residing on premises, network throughput performance and predictability can be enhanced with a service such as a dedicated network path or "hot potato routing". You must consider the current average bandwidth, utilization, predictability, and maximum capabilities of your current public Internet-facing, source-to-destination route, regardless of the method you are using.
 
@@ -504,4 +504,4 @@ While Spark is used for all phases of the data processing lifecycle and can comp
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/geopin.png"><b >Next Steps</b></p>
 
-Next, Continue to <a href="02%20-%20SQL%20Server%20BDC%20Components.md" target="_blank"><i> SQL Server Big Data Cluster Components</i></a>.
+Next, Continue to <a href="02%20-%20SQL%20Server%20BDC%20Components.md" target="_blank"><i> SQL Server big data cluster Components</i></a>.

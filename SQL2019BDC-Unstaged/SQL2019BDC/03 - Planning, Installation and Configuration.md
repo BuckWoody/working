@@ -1,6 +1,6 @@
 ﻿![](../graphics/microsoftlogo.png)
 
-# Workshop: Microsoft SQL Server Big Data Clusters Architecture
+# Workshop: Microsoft SQL Server big data clusters Architecture
 
 #### <i>A Microsoft workshop from the SQL Server team</i>
 
@@ -8,7 +8,7 @@
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/textbubble.png"> <h2>Planning, Installation and Configuration</h2>
 
-In this workshop you'll cover using a Process and and various Platform components to create a SQL Server Big Data Cluster solution you can deploy on premises, in the cloud, or in a hybrid architecture. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
+In this workshop you'll cover using a Process and and various Platform components to create a SQL Server big data cluster solution you can deploy on premises, in the cloud, or in a hybrid architecture. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
 
 (<a href="00%20-%20prerequisites.md" target="_blank">Make sure you check out the <b>prerequisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
 
@@ -28,9 +28,9 @@ You'll cover the following topics in this Module:
 
 <h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="3-0">3.0 Planning your Installation</a></h2>
 
-<i>NOTE: The following Module is based on the Private Preview of the Microsoft SQL Server 2019 Big Data Cluster feature. These instructions will change as the product is updated for the final release. <a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/deployment-guidance?view=sqlallproducts-allversions" target="_blank">The latest installation instructions are located here</a>.</i>
+<i>NOTE: The following Module is based on the Private Preview of the Microsoft SQL Server 2019 big data cluster feature. These instructions will change as the product is updated for the final release. <a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/deployment-guidance?view=sqlallproducts-allversions" target="_blank">The latest installation instructions are located here</a>.</i>
 
-A SQL Server Big Data Cluster (BDC) is deployed onto a Kubernetes Cluster using the mssqlctl utility which creates the appropriate Docker Containers and other constructs. The installation uses various switches on the mssqlctl utility, and reads from several environment variables which you will define before you run the command. 
+A SQL Server big data cluster (BDC) is deployed onto a Kubernetes Cluster using the mssqlctl utility which creates the appropriate Docker Containers and other constructs. The installation uses various switches on the mssqlctl utility, and reads from several environment variables which you will define before you run the command. 
 
 For planning, it is essential that you understand the SQL Server BDC components, and have a firm understanding of Kubernetes and TCP/IP networking. You should also have an understanding of how SQL Server and Apache Spark use the "Big Four"  (*CPU, I/O, Memory and Networking*). 
 
@@ -49,7 +49,7 @@ Regardless of the Kubernetes target, the general steps for setting up the system
 
  - Install the cluster configuration tool mssqlctl on the administration machine
 
- - Deploy the SQL Server Big Data Cluster on the Kubernetes cluster
+ - Deploy the SQL Server big data cluster on the Kubernetes cluster
 
 In the sections that follow, you'll cover the general process for each of these deployments. The official documentation referenced above have the specific steps for each deployment, and the Activity section of this Module has the steps for deploying the BDC on AKS for the classroom enviornment.
 
@@ -89,7 +89,7 @@ The Nodes include the following components:
 
 For a SQL Server BDC in an AKS environment, for an optimal experience while validating basic scenarios, you should use at least three agent VMs with at least 4 vCPUs and 32 GB of memory each. 
 
-With this background, you can find the <a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-on-aks?view=sqlallproducts-allversions" target="_blank">latest specific steps to deploy a SQL Server Big Data Cluster on AKS here</a>.
+With this background, you can find the <a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-on-aks?view=sqlallproducts-allversions" target="_blank">latest specific steps to deploy a SQL Server big data cluster on AKS here</a>.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
@@ -99,7 +99,7 @@ The <a href="https://kubernetes.io/docs/setup/independent/install-kubeadm/" targ
 
 The kubeadm toolbox can deploy a Kubernetes cluster to physical or virtual machines. It works by specifying the TCP/IP addresses of the targets. 
 
-With this background, you can find the <a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-with-kubeadm?view=sqlallproducts-allversions" target="_blank">latest specific steps to deploy a SQL Server Big Data Cluster using kubeadm here</a>.
+With this background, you can find the <a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-with-kubeadm?view=sqlallproducts-allversions" target="_blank">latest specific steps to deploy a SQL Server big data cluster using kubeadm here</a>.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
@@ -119,13 +119,13 @@ Minikube supports the following Kubernetes features:
  - Enabling CNI (Container Network Interface)
  - Data Ingress
 
-With this background, you can find the <a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-on-minikube?view=sqlallproducts-allversions" target="_blank">latest specific steps to deploy a SQL Server Big Data Cluster using minikube here</a>.
+With this background, you can find the <a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-on-minikube?view=sqlallproducts-allversions" target="_blank">latest specific steps to deploy a SQL Server big data cluster using minikube here</a>.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/point1.png"><b><a name="aks">Activity: Check Class Environment on AKS</a></b></p>
 
-In this lab you will check your deployment you performed in Module 01 of a SQL Server 2019 Big Data Cluster on the Azure Kubernetes Service. 
+In this lab you will check your deployment you performed in Module 01 of a SQL Server 2019 big data cluster on the Azure Kubernetes Service. 
 
 Using the following steps, you will evaluate your Resource Group in Azure that holds your BDC on AKS that you deployed earlier. When you complete your course you can delete this Resource Group which will stop the Azure charges for this course. 
 

@@ -311,7 +311,7 @@ For Big Data systems, having lots of Containers is very advantageous to segment 
 
 <p><img style="height: 400; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"  src="../graphics/KubernetesCluster.png"></p> 	 	
 
-In SQL Server Big Data Clusters, Kubernetes is responsible for the state of the SQL Server big data clusters; Kubernetes builds and configures the cluster nodes, assigns pods to nodes, and monitors the health of the cluster.
+In SQL Server big data clusters, Kubernetes is responsible for the state of the SQL Server big data clusters; Kubernetes builds and configures the cluster nodes, assigns pods to nodes, and monitors the health of the cluster.
 
 (You'll cover the storage aspects of Kubernetes clusters in a moment.)
 
@@ -364,7 +364,7 @@ https://hortonworks.com/blog/install-hadoop-windows-hortonworks-data-platform-2-
 
 <h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="1-6">1.6 Big Data Technologies: Command and Control</a></h2>
 
-There are three primary tools and utilities you will use to control the SQL Server Big Data Cluster:
+There are three primary tools and utilities you will use to control the SQL Server big data cluster:
 
  - kubectl
  - mssqlctl
@@ -379,7 +379,7 @@ A <a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/" target="_bl
  
 You'll explore further operations with these tools in the <i>Management and Monitoring</i> module.
 
-<h3>Managing and Monitoring the SQL Server Big Data Cluster <i>(mssqlctl)</i></h3>
+<h3>Managing and Monitoring the SQL Server big data cluster <i>(mssqlctl)</i></h3>
 
 The **mssqlctl** command-line utility is written in Python and can be installed on your workstation using the **pip** command in Python. You will see how to install this utility in the *Planning, Installation and Configuration* module.
 
@@ -411,7 +411,7 @@ You'll use Notebooks within Azure Data Studio to work with Spark, which you'll l
 *Azure Data Studio* is a cross-platform database tool to manage and program on-premises and cloud data platforms on Windows, MacOS, and Linux. It is extensible, and one of these extensions is how you work with Azure Data Studio code and Jupyter Notebooks. It is built on the Visual Studio Code shell. The editor in Azure Data Studio has Intellisense, code snippets, source control integration, and an integrated terminal. 
 
 If you have not completed the pre-requisites for this workshop you can <a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/download?view=sql-server-2017
-" target="_blank">install Azure Data Studio from this location</a>, and you will install the Extension to work with SQL Server Big Data Clusters in a future module</a>.
+" target="_blank">install Azure Data Studio from this location</a>, and you will install the Extension to work with SQL Server big data clusters in a future module</a>.
 
 You can <a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is?view=sql-server-2017 
 " target="_blank">learn more about Azure Data Studio here</a>.
@@ -435,13 +435,13 @@ https://notebooks.azure.com/BuckWoodyNoteBooks/projects/AzureNotebooks
 
 In any large data system, you will need a way to bring the data in. In some cases, you will edit the data either on the way in, or after it is staged using a process called "Extract, Transform and Load" (ETL) or leave the data "pure" and unaltered (common in Data Science projects), using a process called "Extract, Load and Transform" (ELT). 
 
-In SQL Server Big Data Clusters, you'll learn about three ways that the system interacts with large sets of data:
+In SQL Server big data clusters, you'll learn about three ways that the system interacts with large sets of data:
 
  - "Virtualize" the data by pushing down the query to the source system (no data is ingested in this scenario)
  - Ingesting data into SQL Server Tables, using the PolyBase feature or into standard SQL Server constructs
  - Loading data into HDFS
 
-In Data Virtualization, no data is brought into storage - it is queried from it's source. It's important to think about the network bandwidth per query in this scenario. The next two scenarios do bring data into the system, either into SQL Server tables within the Big Data Cluster or into the HDFS mount points.
+In Data Virtualization, no data is brought into storage - it is queried from it's source. It's important to think about the network bandwidth per query in this scenario. The next two scenarios do bring data into the system, either into SQL Server tables within the big data cluster or into the HDFS mount points.
 
 In both cases, the first considerations for loading data are source-data locality and network bandwidth, utilization, and predictability of the path to the SQL Server BDC destination. Depending on where the data originates, network bandwidth will play a major part in your loading performance. For source data residing on premises, network throughput performance and predictability can be enhanced with a service such as a dedicated network path or "hot potato routing". You must consider the current average bandwidth, utilization, predictability, and maximum capabilities of your current public Internet-facing, source-to-destination route, regardless of the method you are using.
 
@@ -530,4 +530,4 @@ https://www.kdnuggets.com/2019/01/practical-apache-spark-10-minutes.html
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/geopin.png"><b >Next Steps</b></p>
 
-Next, Continue to <a href="02%20-%20SQL%20Server%20BDC%20Components.md" target="_blank"><i> SQL Server Big Data Cluster Components</i></a>.
+Next, Continue to <a href="02%20-%20SQL%20Server%20BDC%20Components.md" target="_blank"><i> SQL Server big data cluster Components</i></a>.

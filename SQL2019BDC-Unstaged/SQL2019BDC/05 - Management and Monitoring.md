@@ -1,13 +1,13 @@
 ![](../graphics/microsoftlogo.png)
 
-# Workshop: Microsoft SQL Server Big Data Clusters Architecture
+# Workshop: Microsoft SQL Server big data clusters Architecture
 
 #### <i>A Microsoft workshop from the SQL Server team</i>
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/textbubble.png"> <h2>Management and Monitoring</h2>
-In this workshop you'll cover using a Process and and various Platform components to create a SQL Server Big Data Cluster solution you can deploy on premises, in the cloud, or in a hybrid architecture. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
+In this workshop you'll cover using a Process and and various Platform components to create a SQL Server big data cluster solution you can deploy on premises, in the cloud, or in a hybrid architecture. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
 
 (<a href="00%20-%20prerequisites.md" target="_blank">Make sure you check out the <b>prerequisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
 
@@ -18,7 +18,7 @@ You'll cover the following topics in this Module:
   <dt><a href="#5-0">5.0 Managing and Monitoring Your Solution</a></dt>
   <dt><a href="#5-1">5.1 Using kubectl commands</a></dt>
   <dt><a href="#5-2">5.2 Using mssqlctl commands</a></dt>
-  <dt><a href="#5-3">5.3 Using the Big Data Cluster Portal</a></dt>
+  <dt><a href="#5-3">5.3 Using the big data cluster Portal</a></dt>
 
 </dl>
 
@@ -26,7 +26,7 @@ You'll cover the following topics in this Module:
 
 <h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="5-0">5.0 Managing and Monitoring Your Solution</a></h2>
 
-There are two primary areas for monitoring your SQL Server 2019 Big Data Cluster. The first deals with SQL Server 2019, and the second deals with the set of elements in the Cluster. 
+There are two primary areas for monitoring your SQL Server 2019 big data cluster. The first deals with SQL Server 2019, and the second deals with the set of elements in the Cluster. 
 
 For SQL Server, <a href="https://docs.microsoft.com/en-us/sql/relational-databases/database-lifecycle-management?view=sql-server-ver15" target="_blank">management is much as you would normally perform for any SQL Server system</a>. You have the same type of services, surface points, security areas and other control vectors as in a stand-alone installation of SQL Server. The tools you have avalaible for managing the Master Instance in the SQL Server BDC are the same as managing a stand-alone installation, including SQL Server Management Studio, command-line interfaces, Azure Data Studio, and third party tools. 
 
@@ -36,16 +36,16 @@ For the cluster components, you have three primary interfaces to use, which you 
 
 <h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="5-1">5.1 Using kubectl commands</a></h2>
 
-Since the SQL Server Big Data Cluster lives within a Kubernetes cluster, you'll work with the <b>kubectl</b> command to deal with those specific components. The following list is a short version of some of the commands you can use to manage and monitor the SQL Server BDC implementation of a Kubernetes cluster:
+Since the SQL Server big data cluster lives within a Kubernetes cluster, you'll work with the <b>kubectl</b> command to deal with those specific components. The following list is a short version of some of the commands you can use to manage and monitor the SQL Server BDC implementation of a Kubernetes cluster:
 
  <table style="tr:nth-child(even) {background-color: #f2f2f2;}; text-align: left; display: table; border-collapse: collapse; border-spacing: 2px; border-color: gray;">
 
   <tr><th style="background-color: #1b20a1; color: white;">Command</th> <th style="background-color: #1b20a1; color: white;">Description</th></tr>
 
   <tr><td><pre>az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name></pre></td><td>Download the Kubernetes cluster configuration file and set the cluster context</td></tr>
-  <tr><td><pre>kubectl get pods --all-namespaces</pre></td><td>Get the status of pods in the cluster for either all namespaces or the Big Data Cluster namespace</td></tr>
+  <tr><td><pre>kubectl get pods --all-namespaces</pre></td><td>Get the status of pods in the cluster for either all namespaces or the big data cluster namespace</td></tr>
   <tr><td><pre>kubectl describe pod  <pod_name> -n <namespace_name></pre></td><td>Get a detailed description of a specific pod in json format output. It includes details, such as the current Kubernetes node that the pod is placed on, the containers running within the pod, and the image used to bootstrap the containers. It also shows other details, such as labels, status, and persisted volumes claims that are associated with the pod</td></tr>
-  <tr><td><pre>kubectl get svc -n <namespace_name></pre></td><td>Get details for the Big Data Cluster services. These details include their type and the IPs associated with respective services and ports. Note that SQL Server Big Data Cluster services are created in a new namespace created at cluster bootstrap time based on the cluster name specified in the mssqlctl create cluster <cluster_name> command</td></tr>
+  <tr><td><pre>kubectl get svc -n <namespace_name></pre></td><td>Get details for the big data cluster services. These details include their type and the IPs associated with respective services and ports. Note that SQL Server big data cluster services are created in a new namespace created at cluster bootstrap time based on the cluster name specified in the mssqlctl create cluster <cluster_name> command</td></tr>
   <tr><td><pre>kubectl describe pod  <pod_name> -n <namespace_name></pre></td><td>Get a detailed description of a service in json format output. It will include details like labels, selector, IP, external-IP (if the service is of LoadBalancer type), port, etc.</td></tr>
   <tr><td><pre>kubectl exec -it <pod_name>  -c <container_name> -n <namespace_name> -- /bin/bash <command name></pre></td><td>If existing tools or the infrastructure does not enable you to perform a certain task without actually being in the context of the container, you can log in to the container using kubectl exec command. For example, you might need to check if a specific file exists, or you might need to restart services in the container</td></tr>
   <tr><td>
@@ -82,7 +82,7 @@ In this activity, you will Get the IP Address of the Master Instance in your Clu
 
 <h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="5-2">5.2 Using mssqlctl commands</a></h2>
 
-The **mssqlctl** utility enables cluster administrators to bootstrap and manage Big Data Clusters via the REST APIs exposed by the Controller service. The controller is deployed and hosted in the same Kubernetes namespace where the customer wants to build out a Big Data Cluster. The Controller is responsible for core logic for deploying and managing a Big Data Cluster.
+The **mssqlctl** utility enables cluster administrators to bootstrap and manage big data clusters via the REST APIs exposed by the Controller service. The controller is deployed and hosted in the same Kubernetes namespace where the customer wants to build out a big data cluster. The Controller is responsible for core logic for deploying and managing a big data cluster.
 
 The <a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/concept-controller?view=sqlallproducts-allversions 
 " target="_blank">Controller service is installed by a Kubernetes administrator during cluster bootstrap</a>, using the mssqlctl command-line utility.
@@ -99,7 +99,7 @@ You used the mssqlctl commands to deploy your cluster.
 <p style="border-bottom: 1px solid lightgrey;"></p>
 <br>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="5-3">5.3 Using the Big Data Cluster Portal</a></h2>
+<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/pencil2.png"><a name="5-3">5.3 Using the big data cluster Portal</a></h2>
 
 Using Grafana and Kibana systems as you learned about in Module 01, Microsoft created a single portal you can use to interact with both the SQL Server-specific and Kubernetes portions of the BDC. 
 
@@ -136,8 +136,8 @@ kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterr
 <p><img style="margin: 0px 15px 15px 0px;" src="../graphics/owl.png"><b>For Further Study</b></p>
 <ul>
     <li><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/cluster-admin-portal?view=sqlallproducts-allversions" target="_blank">Official Documentation for this section</a></li>
-    <li><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/cluster-troubleshooting-commands?view=sqlallproducts-allversions" target="_blank">Kubectl commands for monitoring and troubleshooting SQL Server Big Data Clusters</a></li>
-    <li><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/spark-history-server?view=sqlallproducts-allversions" target="_blank">Debug and Diagnose Spark Applications on SQL Server Big Data Clusters in Spark History Server</a></li>
+    <li><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/cluster-troubleshooting-commands?view=sqlallproducts-allversions" target="_blank">Kubectl commands for monitoring and troubleshooting SQL Server big data clusters</a></li>
+    <li><a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/spark-history-server?view=sqlallproducts-allversions" target="_blank">Debug and Diagnose Spark Applications on SQL Server big data clusters in Spark History Server</a></li>
 </ul>
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/geopin.png"><b>Next Steps</b></p>
