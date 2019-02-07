@@ -3,5 +3,6 @@
         "activityBar.background": "#2A3108",
         "titleBar.activeBackground": "#3A440B",
         "titleBar.activeForeground": "#F8FBE9"
-    }
+    },
+    "workbench.colorTheme": "Light HCQ (High Color Queries)"
 }
