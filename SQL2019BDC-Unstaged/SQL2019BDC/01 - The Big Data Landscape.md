@@ -1,6 +1,6 @@
 ![](../graphics/microsoftlogo.png)
 
-# Workshop: Microsoft SQL Server big data clusters Architecture
+# Workshop: Microsoft SQL Server big data clusters Architecture (CTP 2.2)
 
 #### <i>A Microsoft Course from the SQL Server team</i>
 
@@ -10,7 +10,7 @@
 
 In this workshop you'll cover using a Process and various Platform components to create a SQL Server big data cluster solution you can deploy on premises, in the cloud, or in a hybrid architecture. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic. There's a lot here - so focus on understanding the overall system first, then come back and explore each section.
 
-(<a href="00%20-%20prerequisites.md" target="_blank">Make sure you check out the <b>prerequisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
+(<a href="SQL2019BDC/00%20-%20Prerequisites.md" target="_blank">Make sure you check out the <b>prerequisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
 
 You'll cover the following topics in this Module:
 
@@ -136,8 +136,9 @@ Using the following steps, you will create a Resource Group in Azure that will h
 
 <p><b>Steps</b></p>
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png"> <a href="00%20-%20prerequisites.md" target="_blank">Ensure that you have completed all prerequisites</a>.</p>
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png"> <a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/quickstart-big-data-cluster-deploy?view=sqlallproducts-allversions" target="_blank">Read the following article, ensuring that you carefully follow each step</a>. Stop at the section marked <b>Connect to the cluster</b>.</p>
+<p><img style="float: left; margin:Docker Guide 0px 15px 15px 0px;" src="../graphics/checkbox.png"> <a href="SQL2019BDC/00%20-%20Prerequisites.md" target="_blank"> Ensure that you have completed all prerequisites</a>.</p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png"> Open a Command Prompt on your classroom system. <a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/deployment-guidance?view=sqlallproducts-allversions#env" target="_blank"> Read the following article, and use the SET command for the environment variables as instructed in class.</p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png"> <a href="https://docs.microsoft.com/en-us/sql/big-data-cluster/quickstart-big-data-cluster-deploy?view=sqlallproducts-allversions" target="_blank"> Read the following article, ensuring that you carefully follow each step</a>. Stop at the section marked <b>Connect to the cluster</b>.</p>
  
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
@@ -229,6 +230,7 @@ The essential commands you should know for this workshop are below. In Linux you
   <tr><td><b><a href="https://linux.die.net/man/1/chgrp" target="_blank">chgrp</a></b></td><td>Change file group access.</td></tr>
   <tr><td><b><a href="http://www.linfo.org/chown.html" target="_blank">chown</a></b></td><td>Change permissions. Similar to <b>CACLS</b> in Windows.</td></tr>
   <tr><td><b><a href="http://www.linfo.org/cp.html" target="_blank">cp</a></b></td><td>Copy source file into destination. Similar to <b>COPY</b> in Windows.</td></tr>
+  <tr><td><b><a href="http://www.linfo.org/df.html" target="_blank">df</a></b></td><td>Shows free space on mounted devices. Similar to <b>dir | find "bytes free"</b> in Windows.</td></tr>
   <tr><td><b><a href="http://www.linfo.org/file.html" target="_blank">file</a></b></td><td>Determine file type.</td></tr>
   <tr><td><b><a href="https://linux.die.net/man/1/find" target="_blank">find</a></b></td><td>Find files. Similar to <b>DIR filename /S</b> in Windows.</td></tr>
   <tr><td><b><a href="http://www.linfo.org/grep.html" target="_blank">grep</a></b></td><td>Search files for regular expressions. Similar to <b>FIND</b> in Windows.</td></tr>
@@ -239,6 +241,7 @@ The essential commands you should know for this workshop are below. In Linux you
   <tr><td><b><a href="https://www.lifewire.com/what-to-know-more-command-4051953" target="_blank">more</a></b></td><td>Display data in paginated form. Same as in Windows. An improved version of this command is <a href="https://www.lifewire.com/what-to-know-less-command-4051972" target="_blank">less</a>.</td></tr>
   <tr><td><b><a href="https://linux.die.net/man/8/mount" target="_blank">mount</a></b></td><td>Makes a drive, network location, and many other objects available to the operating system so that you can work with it.</td></tr>
   <tr><td><b><a href="http://www.linfo.org/mv.html" target="_blank">mv</a></b></td><td>Move (Rename) an oldname to newname. Similar to <b>REN</b> and <b>DEL</b> combined in Windows.</td></tr>
+  <tr><td><b><a href="https://wiki.gentoo.org/wiki/Nano/Basics_Guide" target="_blank">nano</a></b></td><td>Create and edit text files.</td></tr>
   <tr><td><b><a href="http://www.linfo.org/pwd.html" target="_blank">pwd</a></b></td><td>Print current working directory.</td></tr>
   <tr><td><b><a href="http://www.linfo.org/rm.html" target="_blank">rm</a></b></td><td>Remove (Delete) filename. Similar to <b>DEL</b> in Windows.</td></tr>
   <tr><td><b><a href="http://www.linfo.org/rmdir.html" target="_blank">rmdir</a></b></td><td>Delete an existing directory provided it is empty. Same as in Windows.</td></tr>  
@@ -255,12 +258,12 @@ A <a href="https://opensourceforu.com/2016/07/introduction-linux-system-administ
 <p><b>Steps</b></p>
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png"><a href="https://bellard.org/jslinux/vm.html?url=https://bellard.org/jslinux/buildroot-x86.cfg" target="_blank">Open this link to run a Linux Emulator in a browser</a></p>
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Find the mounted file systems. (hint: mount command)</p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Find the mounted file systems, and then show the free space in them.</p>
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Show the current directory.</p>
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Show the files in the current directory. </p>
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Create a new directory, navigate to it, and create a file called `test.txt` with the words `This is a test` in it. (hint: us the `vi` editor or the `echo` command)</p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Create a new directory, navigate to it, and create a file called <i>test.txt</i> with the words <i>This is a test</i> in it. (hint: us the <b>nano</b> editor or the <b>echo</b> command)</p>
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Display the contents of that file.</p>
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Show the help for the `cat` command.</p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Show the help for the <b>cat</b> command.</p>
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
@@ -294,6 +297,8 @@ This abstraction holds everything for an application to isolate it from other ru
 
 You can have several Containers running at any one time, based on the amount of hardware resources where you run it. For scale-out systems, a Container allows for distribution and control of complete applications using only declarative commands.
 
+You can <a href="https://hackernoon.com/docker-commands-the-ultimate-cheat-sheet-994ac78e2888" target="_blank">read more about Docker here</a>. 
+
 <h3>Container Orchestration <i>(Kubernetes)</i></h3>
 
 For Big Data systems, having lots of Containers is very advantageous to segment purpose and performance profiles. However, dealing with many Container Images, allowing persisted storage, and interconnecting them for network and internetwork communications is a complex task. <i>Kubernetes</i> is an open source Container orchestrator, which can scale Container deployments according to need. The following table defines some important Kubernetes terminology:
@@ -307,10 +312,15 @@ For Big Data systems, having lots of Containers is very advantageous to segment 
   <tr><td>Pod</td><td> A pod is the atomic deployment unit of Kubernetes. A pod is a logical group of one or more containers-and associated resources-needed to run an application. Each pod runs on a node; a node can run one or more pods. The Kubernetes master automatically assigns pods to nodes in the cluster.</td></tr>
  
 </table>
+
+
 	
 <br> 
-
 <p><img style="height: 400; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"  src="../graphics/KubernetesCluster.png"></p> 	 	
+<br>
+
+You can <a href="https://kubernetes.io/docs/tutorials/kubernetes-basics/" target="_blank">learn much more about Kubernetes here</a>.
+
 
 In SQL Server big data clusters, Kubernetes is responsible for the state of the SQL Server big data clusters; Kubernetes builds and configures the cluster nodes, assigns pods to nodes, and monitors the health of the cluster.
 
@@ -344,7 +354,7 @@ You'll cover Volumes in more depth in a future module as you learn how the SQL S
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/point1.png"><b>Activity: Review HDFS Tutorial</b></p>
 
-In large part, you will not have to work with HDFS directly in the SQL Server big data cluster. However, it is a key concept to understand. In this review exercise, you will see a set of tutorials on how HDFS works in greater depth.
+There are two primary storage concepts you will work with in SQL Server Big Data Clusters: the HDFS layer, and SQL Server. Fro HDFS, it's important to know the basics of how it works. 
 
 <p><b>Steps</b></p>
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png"><a href="https://data-flair.training/blogs/hadoop-hdfs-tutorial/" target="_blank">Open this reference, and review the lessons you see there</a>. Bookmark this reference for later review.</p>
@@ -462,7 +472,7 @@ Since HDFS is a file-system, data transfer is largely a matter of using it as a 
 
 <h3>Data Pipelines using <i>Azure Data Factory</i></h3>
 
-As described earlier, you can use various methods to ingest data ad-hoc and as-needed for your two data targets (HDFS and SQL Server Tables. A more holistic archicture is to use a <i>Pipeline</i> system tht can define sources, triggers and events, transforms, targets, and has logging and tracking capabilities. The Microsoft Azure Data Factory provides all of the capabilities, and often serves as the mechanism to transfer data to and from on-premises, in-cloud, and other sources and targets. <a href="https://docs.microsoft.com/en-us/azure/data-factory/concepts-pipelines-activities" target="_blank">ADF can serve as a full data pipeline system, as described here</a>. 
+As described earlier, you can use various methods to ingest data ad-hoc and as-needed for your two data targets (HDFS and SQL Server Tables. A more holistic archicture is to use a <i>Pipeline</i> system that can define sources, triggers and events, transforms, targets, and has logging and tracking capabilities. The Microsoft Azure Data Factory provides all of the capabilities, and often serves as the mechanism to transfer data to and from on-premises, in-cloud, and other sources and targets. <a href="https://docs.microsoft.com/en-us/azure/data-factory/concepts-pipelines-activities" target="_blank">ADF can serve as a full data pipeline system, as described here</a>. 
 
 <br>
 <img style="height: 75;" src="../graphics/adf.png"> 
@@ -497,7 +507,7 @@ While Spark is used for all phases of the data processing lifecycle and can comp
     <li><a href = "https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is?view=sql-server-2017" target="_blank">Official Documentation for this section - Wide World Importers Data Dictionary and company description</a></li>
     <li><a href = "https://www.simplilearn.com/data-science-vs-big-data-vs-data-analytics-article" target="_blank">Understanding the Big Data Landscape</a></li>
     <li><a href = "http://www.admin-magazine.com/Articles/Linux-Essentials-for-Windows-Admins-Part-1" target="_blank">Linux for the Windows Admin</a></li>
-    <li><a href = "file:///home/buck/Documents/windows/Users/bwoody/OneDrive%20-%20Microsoft/workshops/Unstaged/SQL2019BDC-Unstaged/SQL2019BDC/01%20-%20The%20Big%20Data%20Landscape.md" target="_blank">Docker Guide</a></li>
+    <li><a href = "https://docs.docker.com/v17.09/engine/userguide/" target="_blank">Docker Guide</a></li>
     <li><a href = "https://www.kdnuggets.com/2019/01/practical-apache-spark-10-minutes.html" target="_blank">Working with Spark</a></li>
     <li><a href="https://realpython.com/jupyter-notebook-introduction/" target="_blank">Full tutorial on Jupyter Notebooks</a></li>
 </ul>

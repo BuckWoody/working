@@ -1,6 +1,6 @@
 ![](../graphics/microsoftlogo.png)
 
-# Workshop: Microsoft SQL Server big data clusters Architecture
+# Workshop: Microsoft SQL Server big data clusters Architecture (CTP 2.2)
 
 #### <i>A Microsoft Course from the SQL Server team</i>
 
@@ -8,7 +8,7 @@
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/textbubble.png"> <h1>SQL Server big data cluster Components</h1>
 
-In this workshop you'll cover using a Process and and various Platform components to create a SQL Server big data cluster solution you can deploy on premises, in the cloud, or in a hybrid architecture. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
+In this workshop you'll cover using a Process and various Platform components to create a SQL Server big data cluster solution you can deploy on premises, in the cloud, or in a hybrid architecture. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
 
 (<a href="00%20-%20prerequisites.md" target="_blank">Make sure you check out the <b>prerequisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
 
@@ -67,7 +67,7 @@ In this section you will review the solution tutorial you will perform in the <i
 
 <h2><a name="2-2">2.2 SQL Server 2019 big data cluster Components</a></h2>
 
-The Big Data capapbilities for SQL Server can be used in a stand-alone Instance by leveraging the Data Virtualization feature described above. To perform scale-out Big Data, SQL Server implments a big data cluster by leveraging Kubernetes with several other components. 
+The Big Data capabilities for SQL Server can be used in a stand-alone Instance by leveraging the Data Virtualization feature described above. To perform scale-out Big Data, SQL Server implments a big data cluster by leveraging Kubernetes with several other components. 
 
 <br>
 <img style="height: 400; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="../graphics/bdc.png">

@@ -1,6 +1,6 @@
 ![](../graphics/microsoftlogo.png)
 
-# Workshop: Microsoft SQL Server big data clusters Architecture
+# Workshop: Microsoft SQL Server big data clusters Architecture (CTP 2.2)
 
 #### <i>A Microsoft Course from the SQL Server team</i>
 
@@ -153,10 +153,18 @@ choco install kubernetes-cli
 
 the `mssqlctl` program then deploys the SQL Server big data cluster environment onto Kubernetes. 
 
-<i>Note - you must delete the old version before the class. It is updated quite frequently during the preview phase.</i>
+<i>Notes: 
+
+You must delete the old version before the class. It is updated quite frequently during the preview phase.
+
+You may need to run these steps in CMD rather than PowerShell.
+</i>
+
+
 
 <pre>
-setx path "%path%;C:\Users\<replace with your login name>\AppData\Roaming\Python\Python37\Scripts"
+REM If Python does not run in your path, try:
+REM setx path "%path%;C:\Users\<replace with your login name>\AppData\Roaming\Python\Python37\Scripts"
 
 choco upgrade kubernetes-cli
 
