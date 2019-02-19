@@ -92,7 +92,7 @@ This solution uses an example of a retail organization that has multiple data so
 
 <img style="height: 25;" src="../graphics/WWI-logo.png">
 
-<a href="https://azure-scenarios-experience.azurewebsites.net/big-data.html#the-wide-world-importers-sample-customer-scenario" target="_blank">Wide World Importers </a> (WWI) is a traditional brick and mortar business with a long track record of success, generating profits through strong retail store sales of their unique offering of affordable products from around the world. They have a great training program for new employees, that focuses on connecting with their customers and providing great face-to-face customer service. This strong focus on customer relationships has helped set WWI apart from their competitors. 
+Wide World Importeres (WWI) is a traditional brick and mortar business with a long track record of success, generating profits through strong retail store sales of their unique offering of affordable products from around the world. They have a great training program for new employees, that focuses on connecting with their customers and providing great face-to-face customer service. This strong focus on customer relationships has helped set WWI apart from their competitors. 
 
 WWI has now added web and mobile commerce to their platform, which has generated a significant amount of additional data, and data formats. These new platforms were added without integrating into the OLTP system data or Business Intelligence infrastructures. As a result, "silos" of data stores have developed.
 
@@ -123,6 +123,8 @@ As they added new e-commerce channels to expand the customer base, consumer dema
 <br>
 
 In the <i>04 - Operationalization</i> Module, you'll learn how the team solves each of these challenges.
+
+You can read more about <a href="https://azure-scenarios-experience.azurewebsites.net/big-data.html#the-wide-world-importers-sample-customer-scenario" target="_blank">Wide World Importers here</a>.
 
 <br>
 <p style="border-bottom: 1px solid lightgrey;"></p>
@@ -281,6 +283,8 @@ One abstraction layer above installing software directly on hardware is using a 
 
 In this abstraction level, you have full control (and responsibility) for the entire operating system, but not the hardware. This isolates all process space and provides an entire "Virtual Machine" to applications. For scale-out systems, a Virtual Machine allows for a distribution and control of complete computer environments using only software.
 
+You can <a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/tlfs" target="_blank">read the details of Microsoft's Hypervisor here</a>.
+
 <h3>Containers <i>(Docker)</i></h3>
 
 The next level of Abstraction is a <i>Container</i>. There are various types of Container technologies, in this workshop, you will focus on <a href="https://docs.docker.com" target="_blank">Docker</a>.
@@ -312,8 +316,6 @@ For Big Data systems, having lots of Containers is very advantageous to segment 
   <tr><td>Pod</td><td> A pod is the atomic deployment unit of Kubernetes. A pod is a logical group of one or more containers-and associated resources-needed to run an application. Each pod runs on a node; a node can run one or more pods. The Kubernetes master automatically assigns pods to nodes in the cluster.</td></tr>
  
 </table>
-
-
 	
 <br> 
 <p><img style="height: 400; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"  src="../graphics/KubernetesCluster.png"></p> 	 	
@@ -351,6 +353,8 @@ With an abstraction such as Containers, storage becomes an issue for two reasons
 To solve this, Docker implemented the concept of <a href="https://docs.docker.com/engine/admin/volumes/" target="_blank">Volumes</a>, and <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/" target="_blank">Kubernetes extended this concept</a>. Using <a href="https://github.com/kubernetes/examples/blob/master/staging/volumes/azure_disk/README.md" target="_blank">a specific protocol and command, Kubernetes (and in specific, SQL Server BDC) mounts the storage as a *Persistent Volume* and uses a construct called a *Persistent Volume Claim* to access it</a>. A Kubernetes Volume is a mounted directory which is accessible to the Containers in a Pod within the Node.
 
 You'll cover Volumes in more depth in a future module as you learn how the SQL Server BDC takes advantage of these constructs.
+
+You <a href="https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html#Introduction" target="_blank">can read more about HDFS here</a>.
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/point1.png"><b>Activity: Review HDFS Tutorial</b></p>
 
