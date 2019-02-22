@@ -4,7 +4,7 @@ These represent demos and examples you can run to deploy and explore and use SQL
 
 ## deploy
 
-Learn how to execute a machine learning model with Python and built-in native scoring with SQL Server.
+Learn the basics of how to deploy SQL Server on Linux.
 
 ## explore
 
